@@ -1,0 +1,295 @@
+set $mod Mod4
+set $mod1 Mod1
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+font pango:ubuntu 10
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# use these keys for focus, movement, and resize directions when reaching for
+# the arrows is not convenient
+set $up k
+set $down j
+set $left h
+set $right l
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec kitty
+bindsym $mod+semicolon exec emacsclient -a "" -c
+
+# browser
+bindsym $mod+b exec firefox
+bindsym $mod1+q exec qutebrowser
+
+# start emacs
+bindsym $mod+e exec pcmanfm
+
+# kill focused window
+bindsym $mod+q kill
+
+# lock
+bindsym $mod+Shift+x exec i3lock-fancy
+
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec --no-startup-id "rofi -modi drun -show drun -show-icons"
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+p split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+t layout splith
+bindsym $mod+Shift+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 5 px or 5 ppt
+        bindsym $down       resize grow height 5 px or 5 ppt
+        bindsym $up         resize shrink height 5 px or 5 ppt
+        bindsym $right      resize grow width 5 px or 5 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 5 px or 5 ppt
+        bindsym Down        resize grow height 5 px or 5 ppt
+        bindsym Up          resize shrink height 5 px or 5 ppt
+        bindsym Right       resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    font pango:DejaVu Sans Mono, FontAwesome 10
+    position bottom
+    status_command i3status-rs ~/.config/i3/status.toml
+    # colors {
+    #     separator #666666
+    #     background #222222
+    #     statusline #dddddd
+    #     focused_workspace #0088CC #0088CC #ffffff
+    #     active_workspace #333333 #333333 #ffffff
+    #     inactive_workspace #333333 #333333 #888888
+    #     urgent_workspace #2f343a #900000 #ffffff
+    # }
+}
+
+# multimonitor
+# exec_always --no-startup-id ~/a.sh
+
+set $firstMonitor HDMI-A-0
+set $secondMonitor eDP
+
+workspace 1 output $firstMonitor
+workspace 2 output $firstMonitor
+workspace 3 output $firstMonitor
+workspace 4 output $firstMonitor
+workspace 5 output $firstMonitor
+workspace 6 output $secondMonitor
+workspace 7 output $secondMonitor
+workspace 8 output $secondMonitor
+workspace 9 output $secondMonitor
+workspace 10 output $secondMonitor
+
+# Autostart
+exec --no-startup-id /usr/bin/nm-applet --sm-disable &
+exec --no-startup-id picom &
+# exec --no-startup-id variety &
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
+exec --no-startup-id setxkbmap -option "caps:swapescape" &
+# exec --no-startup-id xmodmap ~/.Xmodmap &
+exec --no-startup-id nitrogen --restore &
+exec --no-startup-id redshift &
+exec --no-startup-id xsetroot -cursor_name left_ptr &
+exec --no-startup-id dunst &
+exec --no-startup-id emacs --daemon &
+# exec --no-startup-id clipmenud &
+exec --no-startup-id brightnessctl set 30% &
+# exec --no-startup-id xset r rate 300 50 &
+exec --no-startup-id wmname LG3D &
+exec --no-startup-id volumeicon &
+# exec --no-startup-id pamac-tray &
+exec --no-startup-id ~/.screenlayout/dual.sh &
+exec --no-startup-id alttab &
+exec --no-startup-id flameshot &
+# exec_always ~/.config/polybar/launch.sh
+exec_always xrdb -merge ~/.Xresources
+#
+# powermenu
+bindsym $mod+X mode "$mode_system"
+
+set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+mode "$mode_system" {
+    bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# remove title
+# for_window [class="^.*"] border pixel 1
+# new_window 1pixel
+
+# file manager
+bindsym $mod+Shift+Return exec --no-startup-id pcmanfm
+
+# tabbed as default layout
+# workspace_layout tabbed
+
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [Class="firefox"] border none
+for_window [Class="Chromium"] border none
+for_window [Class="qutebrowser"] border none
+for_window [Class="kitty"] border none
+# for_window [Class="Alacritty"] border none
+for_window [class="Gnome-calculator"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="My Window"] floating enable
+
+# brightness mode
+bindsym $mod+mod1+B mode "$brightness"
+set $brightness Set Brightness to: (2)0%, (4)0%, (6)0%, (8)0%, 1(0)0%
+mode "$brightness" {
+        bindsym 2 exec --no-startup-id xbacklight = 20.1, mode "default"
+        bindsym 4 exec --no-startup-id xbacklight = 40, mode "default"
+        bindsym 6 exec --no-startup-id xbacklight = 60.1, mode "default"
+        bindsym 8 exec --no-startup-id xbacklight = 80, mode "default"
+        bindsym 0 exec --no-startup-id xbacklight = 100, mode "default"
+        bindsym Up exec --no-startup-id xbacklight +5
+        bindsym Down exec --no-startup-id xbacklight -5
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym KP_Enter mode "default"
+}
+
+#mute microphone
+bindsym mod1+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+bindsym $mod+m exec --no-startup-id ~/.local/bin/dpi
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+ # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%- # decrease screen brightness
+bindsym Print exec --no-startup-id flameshot screen -p ~/Pictures # decrease screen brightness
+
+workspace_layout tabbed

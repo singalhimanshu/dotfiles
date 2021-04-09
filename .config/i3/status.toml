@@ -1,0 +1,25 @@
+theme = "plain"
+icons = "awesome5"
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage}% {time}"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "networkmanager"
+on_click = "kitty -e nmtui"
+interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
+interface_name_include = []
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"
+
