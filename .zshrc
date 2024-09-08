@@ -113,6 +113,12 @@ alias gs="git status"
 alias gar="git add ."
 alias gc="git commit"
 alias gp="git push"
+alias g.="git add -p"
+
+function timetagger() {
+  python -m timetagger --bind=0.0.0.0:8888;
+  # xdg-open "http://localhost:8888";
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

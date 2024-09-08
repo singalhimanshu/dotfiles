@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'kanagawabones'
+config.color_scheme = 'GitHub Dark'
 config.font = wezterm.font 'Comic Code Medium'
 config.font_size = 16
 -- config.disable_default_key_bindings = true
@@ -85,7 +85,7 @@ config.keys = {
   },
 }
 
-config.default_cursor_style = "SteadyBar"
+config.default_cursor_style = "BlinkingBar"
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 

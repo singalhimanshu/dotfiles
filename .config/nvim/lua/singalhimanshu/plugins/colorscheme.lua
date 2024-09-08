@@ -1,7 +1,7 @@
 return {
   {
     "rebelot/kanagawa.nvim",
-    priority = 1000,
+    priority = 1,
     config = function()
       -- local bg = "#011628"
       -- local bg_dark = "#011423"
@@ -39,7 +39,23 @@ return {
     })
 
       -- load the colorscheme here
-      vim.cmd([[colorscheme kanagawa]])
+      -- vim.cmd([[colorscheme kanagawa]])
+    end,
+  },
+  {
+    "EdenEast/nightfox.nvim",
+    priority = 1,
+    config = function()
+      -- load the colorscheme here
+      -- vim.cmd([[colorscheme carbonfox]])
+    end,
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    priority = 1000,
+    config = function()
+      -- load the colorscheme here
+      vim.cmd([[colorscheme github_dark_default]])
     end,
   }
 }
