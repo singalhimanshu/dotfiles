@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'GitHub Dark'
+config.color_scheme = 'Gruvbox dark, hard (base16)'
 config.font = wezterm.font 'Comic Code Medium'
 config.font_size = 16
 -- config.disable_default_key_bindings = true

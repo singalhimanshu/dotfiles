@@ -52,10 +52,34 @@ return {
   },
   {
     "projekt0n/github-nvim-theme",
+    priority = 1,
+    config = function()
+      -- load the colorscheme here
+      -- vim.cmd([[colorscheme github_dark_default]])
+    end,
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
       -- load the colorscheme here
-      vim.cmd([[colorscheme github_dark_default]])
+      require('gruvbox').setup({
+        contrast = "hard"
+      })
+      vim.cmd([[colorscheme gruvbox]])
     end,
-  }
+  },
+  {
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup({
+				"css",
+				"javascript",
+				"markdown",
+				html = {
+					mode = "foreground",
+				},
+			})
+		end,
+	},
 }
