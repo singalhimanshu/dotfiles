@@ -1,0 +1,13 @@
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file t)
+
+(setq backup-directory-alist
+      `(("." . "~/.emacs.d/backups"))
+      auto-save-file-name-transforms
+      `((".*" . "~/.emacs.d/auto-save-list/" t)))
+
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode t))
+

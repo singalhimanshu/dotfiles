@@ -1,0 +1,56 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/" . "himanshu/")
+ ("/" . "home/")
+ ("/home/himanshu/.emacs.d/" . "auto-save-list/")
+ ("/home/himanshu/repos/notmy/codesearch/cmd/" . "cgrep/")
+ ("/home/himanshu/repos/notmy/codesearch/" . "cmd/")
+ ("/home/himanshu/repos/notmy/" . "codesearch/")
+ ("/home/himanshu/repos/" . "discord-experiment/")
+ ("/home/himanshu/" . "repos/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/himanshu/repos/discord-experiment/"
+ "/home/himanshu/repos/"
+ "/home/himanshu/.emacs.d/"
+ "/home/himanshu/repos/notmy/codesearch/cmd/cgrep/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "README.md"
+ "init.el"
+ "cgrep.go"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/himanshu/repos/discord-experiment/src/main/java/com/singalhimanshu/discord_experiment/" (26379 44967 872048 295000) "../" "./" "DiscordExperimentApplication.java")
+
+ ("/home/himanshu/repos/discord-experiment/" (26379 42881 886324 400000) "mvnw" "../" "src/" "./" "mvnw.cmd" "HELP.md" ".gitignore" ".mvn/" "pom.xml")
+
+ ("/home/himanshu/repos/" (26379 42896 318154 541000) "go-playground/" "../" "learn/" "java-interview-questions/" "./" "notmy/" "my-distributed-cache/" "source-hound/" "discord-experiment/")
+
+ ("/home/" (26312 4922 970825 767000) "../" "./" "himanshu/" "lost+found/")
+
+ ("/home/himanshu/.emacs.d/" (26379 37998 759770 877000) "auto-save-list/" "transient/" "eln-cache/" "../" "elpa/" "./" "init.el~" "backups/" "ido.last" "tree-sitter/" "custom.el" "init.el")
+
+ ("/home/himanshu/" (26379 37824 558569 153000) ".fzf/" ".cache/" "Desktop/" ".ssh/" ".vscode/" "Templates/" "../" ".gitconfig" "IdeaProjects/" ".var/" ".m2/" ".fzf.zsh" ".tmux.conf" ".nvidia-settings-rc" ".fonts/" ".local/" ".xsession-errors" "./" ".java/" ".bashrc" ".bash_logout" ".themes/" ".zshrc.bak" ".gtkrc-2.0" "Music/" ".pyenv/" ".gnupg/" ".pki/" ".nvm/" ".mozilla/" ".fzf.bash" "go/" ".Xauthority" ".zshrc" ".linuxmint/" "_timetagger/" ".emacs.d/" "Videos/" ".profile" "repos/" "Downloads/" "Documents/" ".oh-my-zsh/" ".icons/" ".tmux/" ".zcompdump-himanshu-pc-5.9" ".npm/" ".gitignore" ".wezterm.lua" ".csearchindex~" ".sudo_as_admin_successful" ".zsh_history" ".dotnet/" ".gtkrc-xfce" ".dmrc" ".wget-hsts" ".xsession-errors.old" ".zcompdump-himanshu-pc-5.9.zwc" "Pictures/" ".ideavimrc" ".jdks/" ".bash_history" ".lesshst" ".csearchindex" "Public/" ".config/" "dotfiles/" ".zshrc.pre-oh-my-zsh")
+
+ ("/home/himanshu/repos/notmy/codesearch/cmd/cgrep/" (26379 36640 873288 651000) "../" "./" "cgrep.go")
+
+ ("/home/himanshu/.emacs.d/auto-save-list/" (26379 36351 626356 285000) "../" "./")
+
+ ("/home/himanshu/repos/notmy/codesearch/cmd/" (26326 47683 943237 118000) "../" "cindex/" "./" "cgrep/" "csearch/" "csweb/")
+
+ ("/home/himanshu/repos/notmy/codesearch/" (26326 49692 685947 633000) "index/" ".vscode/" "../" "./" "regexp/" "go.mod" "README" "cmd/" "LICENSE" "sparse/" "CONTRIBUTORS" "AUTHORS" ".git/" "lib/")
+
+ ("/home/himanshu/repos/notmy/" (26364 65245 746162 349000) "ctags/" "../" "codesearch/" "v4l2loopback/" "neovim-0.10.1.zip" "Low-Level-Design/" "./" "Linux-Fake-Background-Webcam/" "neovim-0.10.1/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
