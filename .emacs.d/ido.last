@@ -2,44 +2,122 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/himanshu/repos/notmy/402/src/" . "app/")
+ ("/home/himanshu/repos/notmy/402/" . "src/")
+ ("/home/himanshu/repos/notmy/402/src/app/dashboards/" . "aimbitionBoxDash/")
+ ("/home/himanshu/repos/notmy/402/src/app/" . "dashboards/")
+ ("/home/BAK/repos/naukri-services/" . "central-content-management-services/")
+ ("/home/BAK/repos/" . "naukri-services/")
+ ("/home/BAK/" . "repos/")
+ ("/home/himanshu/Documents/" . "Obsidian Vault/")
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/src/main/" . "java/")
+ ("/home/himanshu/repos/naukri-services/naukri-content-processing-services/" . "controllers/")
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/src/" . "main/")
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/" . "src/")
+ ("/home/himanshu/repos/naukri-services/" . "naukri-content-processing-services/")
  ("/home/" . "himanshu/")
- ("/" . "home/")
+ ("/" . "tmp/")
  ("/home/himanshu/.emacs.d/" . "auto-save-list/")
  ("/home/himanshu/repos/notmy/codesearch/cmd/" . "cgrep/")
  ("/home/himanshu/repos/notmy/codesearch/" . "cmd/")
- ("/home/himanshu/repos/notmy/" . "codesearch/")
- ("/home/himanshu/repos/" . "discord-experiment/")
- ("/home/himanshu/" . "repos/")
+ ("/home/himanshu/repos/notmy/" . "402/")
+ ("/home/himanshu/repos/" . "notmy/")
+ ("/home/himanshu/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/himanshu/.emacs.d/"
+ "/home/himanshu/repos/notmy/402/src/app/dashboards/aimbitionBoxDash/"
+ "/home/himanshu/repos/notmy/402/"
+ "/home/himanshu/repos/scripts/bot-scripts/"
+ "/home/himanshu/repos/naukri-services/naukri-content-processing-services/"
+ "/home/himanshu/Documents/Obsidian Vault/"
+ "/home/himanshu/repos/naukri-services/central-content-management-services/"
+ "/home/BAK/repos/naukri-services/central-content-management-services/"
+ "/home/himanshu/dotfiles/.emacs.d/"
+ "/home/himanshu/repos/naukri-services/naukri-content-processing-services/controllers/"
  "/home/himanshu/repos/discord-experiment/"
  "/home/himanshu/repos/"
- "/home/himanshu/.emacs.d/"
  "/home/himanshu/repos/notmy/codesearch/cmd/cgrep/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "README.md"
  "init.el"
- "cgrep.go"
+ "ContentModerationModal.js"
+ "ContentModal.js"
+ "package.json"
+ "index.js"
+ "23_10_2024.json"
+ "requirements.txt"
+ "new_req.txt"
+ "pipeline.json"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/himanshu/dotfiles/.emacs.d/" (26397 6573 77516 35000) "init.el~" "../" "custom.el" "elpa/" "auto-save-list/" "smex-items" "projects" "eln-cache/" "transient/" "./" "ido.last" "backups/" "session.10f517795214129747172881704686877300000020320078" "tree-sitter/" "init.el" "history")
+
+ ("/home/himanshu/.emacs.d/" (26397 6444 576006 128000) "init.el~" "../" "custom.el" "elpa/" "auto-save-list/" "smex-items" "projects" "eln-cache/" "transient/" "./" "ido.last" "backups/" "session.10f517795214129747172881704686877300000020320078" "tree-sitter/" "init.el" "history")
+
+ ("/home/himanshu/repos/notmy/402/src/app/dashboards/aimbitionBoxDash/" (26397 5594 932991 139000) "../" "stores/" "ContentModal.js" "index.js" "Utilities.js" "ContentModerationModal.js" "DummySearchResponse.js" "ContentModal.scss" "./" "Utilities.scss" "ContentModerationModal.scss" "containers/")
+
+ ("/home/himanshu/" (26396 52898 44619 213000) "kubectl" "Work/" ".zcompdump-himanshuk-5.8.1.zwc" "powerlevel10k/" "wiki/" ".zshenv" "../" ".wezterm.lua" ".ssh/" ".local/" ".gnupg/" ".zsh/" ".bashrc" ".kube/" ".viminfo" ".keras/" ".zshrc.pre-oh-my-zsh" "Templates/" "nvim-linux64.tar.gz" ".bash_logout" ".fzf/" "notes/" ".pki/" "Postman/" "files_to_keep.txt" "snap/" "Desktop/" "99acres.postman_collection.json" "repos/" "kafka/" ".zcompdump-himanshuk-5.8.1" "Videos/" ".gitignore" ".fzf.bash" ".oh-my-zsh/" ".p10k.zsh" ".sudo_as_admin_successful" ".mozilla/" "intellij-java-code-formatter-style.xml" "Public/" ".pyenv/" ".profile.bak" "Pictures/" ".npm/" ".histfile" ".gnome/" ".lesshst" ".nvm/" "Documents/" ".thunderbird/" ".GlobalProtect/" "vpn.sh" "./" ".aws/" ".bash_history" "nltk_data/" ".java/" ".fzf.zsh" ".zcompdump" "kubectl.1" ".m2/" ".python_history" ".zshrc" ".config/" ".cache/" ".profile" ".mongodb/" "CAC.mp4" ".shell.pre-oh-my-zsh" "BurpSuiteCommunity/" "Downloads/" ".zsh_history" ".BurpSuite/" ".gitconfig" ".jdks/" "Precision, Recall, Accuracy.pdf" ".emacs.d/" "Music/" "kibana/" "opt_bak/" ".ideavimrc" ".u2net/" "dotfiles/")
+
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/" (26394 31914 904256 633000) "../" "work/" ".idea/" ".gitignore" "logs/" ".git/" "TODO.md" "./" "README.md" "deploy-config/" "target/" "pom.xml" "src/")
+
+ ("/home/himanshu/Documents/Obsidian Vault/" (26394 38113 858681 293000) "Aggreate minis interaction to content.md" "Content Search Improvement.md" "Note 2024-04-25T17.54.07.md" "Minis video contract update.md" "Content DR.md" "Code review.md" "Note 2024-09-26T14.49.22.md" "Plag setup.md" "Note 2024-04-29T12.16.43.md" "Content Schema Changes and Search Improvement.md" "Questions.md" "Python version upgrade and Rocky 9 migration.md" "Tech worth exploring.md" "Airflow Naukri.md" "Note 2024-04-09T12.15.48.md" "Note 2024-02-28T14.22.27.md" "Optimizations.md" "Note 2024-09-10T16.03.51.md" "Mongo Error.md" "** loading stage recipe 'naukri_kubernetes_services_kube'.md" "Note 2024-10-14T18.55.34.md" "Ambition box questions pipeline issue.md" "Delete content.md" "Populate missing job titles.md" "Interesting reads.md" "nginx alternatives.md" "Questions 2.md" "Linux Magic.md" "Naukri Knowledge.md" "Note 2024-06-26T12.06.48.md" "2023-08-22.md" "UBA 1.md" "1_fxiTNIgOyvAombPJx5KGeA.webp" "2023-08-23.md" "Naukri360 Code review.md" "interaction data query.md" "Note 2023-11-08T10.39.58.md" "Content Tagging using semantic search.md" "Kaam.md" "Content KT.md" "Note 2024-07-24T13.35.23.md" "Note 2024-02-08T17.40.17.md" "Jobseeker duplicate profiles.md" "Articles Migration.md" "AB Company Review GenAI.md" "Note 2024-01-22T15.40.07.md" "Note 2024-08-07T10.59.02.md" "Note 2023-09-12T16.24.43.md" "Minis 2.md" "Note 2024-04-30T12.59.48.md" "Note 2024-10-02T17.58.40.md" "Note 2024-07-23T15.51.03.md" "Note 2024-05-22T19.05.14.md" "Note 2024-04-08T14.27.45.md" "WORK.md" "MINIS TASK LIST.md" "Note 2024-04-26T16.24.58.md" "Mongo Frequently used queries.md" "Note 2024-10-23T17.36.50.md" "UBA.md" "Note 2024-02-21T13.33.17.md" "Note 2024-10-16T15.48.12.md" "dashboard_work.md" "Video Streaming.md" "GenAI module integration.md" "Note 2024-02-14T10.54.33.md" "OPEN POINTS.md" "Content Elasticsearch DR.md" "Elasticsearch.md" "Tagging Algo.md" "N360 - Q&Ans.md" "Work tracking.md" "Note 2024-02-12T14.12.07.md" "Note 2024-10-09T12.13.11.md" "Java Serialization.md" "Scratch.md" "Aerospike.md" "FED/" "Note 2024-05-10T13.23.54.md" "Tags.md" "Twig.md" "Note 2024-04-16T11.15.43.md" "Knowledge Base.md" "Reading list.md" "Note 2023-10-18T18.05.52.md" "Note 2024-07-25T17.36.04.md" "Plag check.md" "Retry Mechanism.md" "CP <> Naukri 360.md" "AB company tagging issue.md" "Note 2023-09-22T13.28.55.md" "Naukri Content Processing Service Local Setup.md" "Note 2024-09-12T11.32.04.md" "Note 2024-09-25T11.50.21.md" "Note 2024-06-13T18.03.05.md" "Note 2024-05-13T19.23.01.md" "Ambition box designation tagger v2.md" "Note 2024-06-11T16.08.53.md" "Note 2024-06-03T12.48.44.md" "trash/" "Note 2024-02-21T16.19.30.md" "Mongo Query Optimization.md" "Naukri360 Interview Preparation Questions.md" "Mongo Indexes.md" "Note 2024-10-04T10.27.38.md" "Release process changes in Jira.md" "Coding Ninjas <> Naukri Data.md" "Note 2024-01-17T15.41.59.md" "Wurk.md" "Ambox URL null issue.md" "Shell Commands.md" "Note 2024-06-12T16.59.49.md" "Speech Recognition POC.md" "Ambox Interview Question Cases.md" "Ideas.md" "Naukri 360.md" "designation tagging imp.md" "GEN_AI/" ".obsidian/" "Minis Contracts.md" "Video maker.md" "DS Reco API integration.md" "CP Behavioral Data Tracking Structure.md" "Minis video.md" "LLM stuff.md" "TODO.md" "Good practices.md" "Python performance benchmarking.md" "Note 2024-02-02T12.22.46.md" "Javascript.md" "Task.md" "Polls.md" "Naukri bot detectoin service.md" "Note 2024-02-16T16.18.35.md" "Note 2023-09-11T11.08.38.md" "Note 2024-03-21T15.12.55.md" "Note 2024-07-02T15.29.41.md" "Note 2024-06-20T19.58.04.md" "Note 2024-03-13T17.24.09.md" "Hi Nikita,.md" "Note 2024-06-20T16.57.41.md" "Note 2024-02-23T12.27.09.md" "Premium article.md" "Ambition Box Interview QUestion.md" "Self service queries.md" "Delete minis reels.md" "### How do we handle callbacks?.md" "Note 2024-03-29T13.08.17.md" "Obsidian-1.1.9.appimage" "Plan.md" "========================.md" "Python library version issue.md" "Note 2024-03-14T12.14.40.md" "Content/" "Important Links.md" "Blog Changes.md" "Search.md" "Content Superset Tags.md" "[SCHEMA] Ingestion via Dashboard.md" "Gitlab.md" "Laws.md" "Note 2024-05-15T09.52.48.md" "Standup.md" "Problem with separation of layer in content workflow.md" "CP Deck.md" "Note 2024-08-01T18.05.30.md" "Content DR 2.md" "Note 2024-05-07T11.49.51.md" "Concepts.md" "Running Multiple Workflows.md" "Note 2024-04-22T12.55.07.md" "Validation of Excel.md" "Kafka Error.md" "Tech Debt - Content Platform.md" "Note 2024-04-17T13.58.07.md" "Content secrets - KMS.md" "Note 2024-05-09T12.14.43.md" "Note 2024-09-02T11.21.00.md" "Explore.md" "Minis.md" "Note 2024-07-23T14.12.30.md" "Delete Videos from dashboard.md" "Gen AI use cases.md" "Performance 2023-2024.md" "content_id dependencies.md" "Note 2023-12-19T18.03.06.md" "Python deploy pipeline.md" "Note 2024-07-22T10.48.42.md" "Note 2024-04-02T11.31.53.md" "Note 2024-10-10T16.47.21.md" "JPS + Lookup -> DS Reco API.md" "Python.md" "React.md" "Opengrok setup.md" "Note 2024-04-01T15.27.18.md" "2023-08-24.md" "Backlog.md" "Ingestion via dashboard.md" "Video manager POC.md" "Note 2024-09-23T12.07.47.md" "Note 2024-05-24T14.49.18.md" "Content ID change.md" "Moving config to DB.md" "Java Mongo Aggregation Example.md" "Bugs.md" "Content Batch Support.md" "Note 2024-06-05T15.52.55.md" "POTD.md" "Note 2024-09-20T13.22.12.md" "MongoDB.md" "Note 2024-04-16T13.10.55.md" "Content Report mongo queries.md" "Video Geenra.md" "Interaction Data Queries.md" "Obsidian-1.1.9 1.appimage" "Content Questions.md" "Note 2024-09-09T11.17.23.md" "Note 2024-06-11T11.26.51.md" "Caching DB calls GenAI.md" "Note 2024-04-14T23.07.32.md" "Elastic Upgrade.md" "Note 2024-06-27T23.42.29.md" "Precision, Recall, Accuracy.md" "### Good Parts.md" "Note 2024-07-23T14.48.56.md" "Note 2024-03-26T17.12.46.md" "mnj-content flow.md" "Note 2024-04-29T17.14.08.md" "Note 2024-10-14T17.24.45.md" "Ambition box interview question title update.md" "Content work.md" "AB Funnel.md" "Updated contract.md" "milvus.md" "Content Generation and module level state management flow.md" "AB INT QUES MISSING RECORDS.md" "AB Company Reviews.md" "TDD Experience.md" "media/" "Note 2024-10-09T19.54.57.md" "Note 2024-06-27T11.38.29.md" "Note 2024-08-08T16.27.02.md" "Asynchronous programming in java.md" "Note 2023-10-30T14.19.31.md" "Langchain.md" "Note 2024-07-23T12.26.06.md" "Chrome extension.md" "Note 2023-09-27T12.58.41.md" "notes.sqlite" "Frontend dashboard.md" "Airflow installation.md" "Naukri 360 audio evaluation.md" "Note 2024-10-15T12.51.42.md" "Onboarding.md" "Feels.md" "Plagiarism Checker Plan.md" "Note 2024-02-07T01.47.44.md" "../" "./")
+
+ ("/home/himanshu/repos/naukri-services/naukri-content-processing-services/" (26396 51324 825647 977000) "scripts/" "app.log_235340" "preprocessors/" "app.log_237521" "../" "app.log_29523" "app.log_187456" "app.log_30700" "app.log_31736" "common/" "moderation_services/" "app.log_62275" "Resume/" "daos/" "moderation_dao/" "app.log_236261" ".idea/" "static/" "Dockerfile" "modules/" "app.log_158999" "app.log_146360" "moderation/" "app.log_76038" "app.log_150917" "app.log_39299" "wsgi.py" "config/" "listeners/" "controllers/" ".gitignore" "app.log_72573" "clientconfig/" "app.log_91579" "UpdateResumeService/" "app.log_97125" "deploy/" "app.log_167456" "test/" "external/" ".git/" "app.log_31388" "moderation_config/" "app.log_82840" "app.log_85048" "app.log_53281" "app.log_187456.2024-10-24" "validation/" "app.log_29122" "gunicorn_config.py" "app.log_60420" "app.log_97125.2024-10-23" "app.log_151603" "./" "app.log_3613" "app.json" "services/" "README.md" "moderation_script/" "app.log_40226" "app.log_66862" "postprocessors/" "__pycache__/" "StaticData/" "requirements.txt" "server.log" "dataobjects/" "app.log_186481" "new_req.txt" "application.py" "app.log_43399" "app.log_72396" "env_config.yaml" "app.log_234498" "transformconfig/" "lib-sources/" "app.log_151840" "app.log_10103" "deployment.yml" "app.log_146800" "app.log_157074" "app.log_18021" "app.log_28031" "app.log_59231" "fairseq.tar.gz" "moderation_helper/" "app.log_61680" "package-install/" "app.log_168422" "app.log_88934" "app.log_43015" "app.log_28429" "app.log_63707" "transform/" "app.log_58911" "app.log_22336" "access.log" "mnj_post_moderation_processing/" "app.log_234176" "app.log_39657")
+
+ ("/home/himanshu/repos/scripts/bot-scripts/" (26393 4078 743587 65000) "../" "./" "23_10_2024.json")
+
+ ("/home/himanshu/repos/notmy/402/src/app/" (26395 34661 565392 743000) "vendor/" "utils/" "../" "recFollowupPage/" "spamJobDetectionPage/" "botDetection/" "index.scss" "index.js" "components/" "redux/" "loginPage/" "root/" "helpers/" "routes/" "spamSignalsPage/" "rootFlow/" "opsPage/" "./" "webfont.font.js" "browserSharing/" "routeInfo.js" "ims/" "dashboards/" "util/" "config.js" "shared/" "auth/")
+
+ ("/home/himanshu/repos/notmy/402/" (26393 58121 773540 761000) "scripts/" "../" "gen/" "jest.config.js" "package-lock.json" ".eslintrc.js" ".husky/" "config/" "node_modules/" ".gitignore" ".eslintignore" ".git/" ".prettierignore" "commitlint.config.js" "tsconfig.json" "archived/" "./" "README.md" ".babelrc" "icons/" "sonarqube/" "public/" ".prettierrc" ".vscode/" "pipeline.json" "package.json" ".gitattributes" "src/")
+
+ ("/home/himanshu/repos/notmy/402/src/" (26372 55214 506259 0) "setupTests.ts" "../" "configs/" "types/" "c/" "sass/" "components/" "app/" "./" "resources/" "index.tsx" "index_old.js" "i/" "react-app-env.d.ts" "style/")
+
+ ("/home/himanshu/repos/notmy/402/src/app/dashboards/aimbitionBoxDash/containers/" (26372 55214 478260 0) "../" "./" "App.scss" "App.js")
+
+ ("/home/himanshu/repos/notmy/402/src/app/dashboards/" (26372 55214 490260 0) "commons/" "../" "stores/" "blockUnblockInterface/" "genericFraudDashboards/" "resdexSpamDashboard/" "index.js" "recruiterCaptchaDashboard/" "aimbitionBoxDash/" "complaints/" "companyDashboard/" "dashboardInterface/" "./" "resdexSpamDashboard_V2/" "automationCompanyDashboard/" "authoringInterface/" "fraudDashboard/" "automationRecruiterDashboard/" "newOpsKycDashboard/" "dailyAutomationCompanyDashboard/" "opsDashboard/" "moderationDashboard/" "accountSharingDashboard/")
+
+ ("/home/himanshu/repos/naukri-services/naukri-content-processing-services/controllers/" (26392 42681 511266 270000) "normalized_content_pipeline_controller.py" "../" "moderation_controller.py" "./" "content_module_controller.py" "__pycache__/" "video_profile_controller.py" "content_pipeline_controller.py" "content_pipeline_processed_moderation_controller.py")
+
+ ("/home/himanshu/repos/scripts/" (26387 47439 905735 816000) "../" "ingest-minis-videos/" "status.sh" "aws_s3/" "ambox-interview-questions/" "content-ambox-elastic-company-designation-data.py" "designation-data-fix/" "content-maker/" "fetch-content/" "ambox-tracking-data/" "naukri360-data-verify/" "upload-video-to-fss.py" "content_error_retry/" "./" "ds_desig_test/" "ab-sim-issue/" "data/" "pattern_maching.js" "compound_idx.js" "compare-desig-tagging/")
+
+ ("/home/himanshu/repos/" (26386 17755 646093 499000) "scripts/" "learning/" "workflow-visualizer/" "docker/" "../" "airflow-auto/" "airflow-dags/" "content-scripts/" "tmp/" "poc/" "dags/" "naukri-services/" "notmy/" "mnr-services/" "./" "k8-demo/" "docker-mysql/" "opt/" "software/" "copy-to-contact-info-archive.py" "personal/" "backup/" "rdxOffline/" "queries/" "data/" "chrome_overrides/" "resdex-services/" "cron-monitor-rnd/" "curls/" "content-pipeline-schema/" "schemas/")
+
+ ("/home/himanshu/repos/notmy/" (26384 48757 985368 27000) "python-ffmpeg-video-streaming/" "taxonomy/" "../" "results.sqlite" "opengrok/" "__MACOSX/" "airflow-dags/" "Dockerfile" "apt-fast/" "rnnoise/" "sent/" "gnome-browser-connector/" "ollama-ui/" "402/" "taxonomy-api-service/" "globalprotect-openconnect/" "rest-service-client-utils/" "emacs/" "pymilvus/" "taskgo/" "panim/" "2/" "the-algorithm/" "AURA/" "java-practice/" "node-v20.11.0.tar.gz" "neovim/" "untitled/" "parcellite/" "archetype-cloud-grizzly-jersey/" "./" "taskwarrior-tui/" "faster-whisper/" "messaging-spring-boot-starter/" "tdd-by-example/" "airflow/" "uber-lld/" "DevToolboxWeb/" "plagiarism-poc/" "naukri-content-processing-services/" "mockinterviews-service/" "RapidFuzz/" "turn-based-game-ai/" "Medium-Anti-Member-Only/")
+
+ ("/tmp/" (26386 14149 184518 189000) "6ME1V2.shell-extension.zip" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-apache2.service-hoQC5c/" "UOA4V2.shell-extension.zip" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-power-profiles-daemon.service-bTQpPB/" "kotlin-idea-7267567859971261965-is-running" ".com.google.Chrome.be4mSr/" ".XIM-unix/" "qipc_systemsem_IavGoBeeZikcQcswcFqTzxuXqSYtMWxZdLqEg29c1fcceeae5b00229fc007ebf52184498f4755c" "40D4V2.shell-extension.zip" "qipc_sharedmemory_IavGoBeeZikcQcswcFqTzxuXqSYtMWxZdLqEg29c1fcceeae5b00229fc007ebf52184498f4755c" ".com.google.Chrome.4uemou" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-ModemManager.service-rveZsX/" "IavGo+BeeZikcQcswcFqT2zxuXqSY8tM4WxZ9d9LqEg=" "wezterm-blob-lease-MkTjFsGL/" ".ICE-unix/" ".Test-unix/" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-systemd-logind.service-uqea9n/" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-systemd-oomd.service-TnVPet/" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-fwupd.service-zeEfrS/" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-switcheroo-control.service-xH7mzF/" ".X1024-lock" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-bolt.service-Cd77o4/" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-upower.service-MhMGk4/" ".mount_jetbrauxGhsR/" ".X0-lock" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-bluetooth.service-sLa685/" ".X1-lock" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-colord.service-ANeD3t/" ".X1025-lock" "hsperfdata_himanshu/" ".font-unix/" ".com.google.Chrome.hCt4lo/" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-systemd-resolved.service-cTb50Z/" "qipc_sharedmemory_edacbef3ee8f13ea0abd3c39387cc6c4e45b1a792bf500e" "systemd-private-80d1f146246e4c9c8fbc90aa4cd39afe-systemd-timesyncd.service-jQySkh/" "snap-private-tmp/" ".X11-unix/" "../" "./")
+
+ ("/home/BAK/repos/naukri-services/central-content-management-services/" (26373 3050 603815 0) "../" "work/" ".idea/" "kube-target/" ".gitignore" "logs/" ".git/" "TODO" "./" "README.md" "deploy-config/" "target/" "pom.xml" "src/")
+
+ ("/home/BAK/repos/naukri-services/" (26364 56593 134287 0) "../" "central-content-management-services/" "ni_ff_cron/" "prompt-execute-services.iml" "./" "central-content-plagiarism-services/" "archetype-exception-framework/" "rdxOffline/" "jobseeker-video-profile-moderation/" "naukri-content-management-services/" "prompt-execute-services/" "naukri-content-processing-services-bak/" "naukri-content-processing-services/" "generative-ai-services/")
+
+ ("/home/BAK/repos/" (26380 49375 907760 0) "scripts/" "learning/" "workflow-visualizer/" "docker/" "../" "airflow-auto/" "airflow-dags/" "content-scripts/" "tmp/" "poc/" "dags/" "naukri-services/" "notmy/" "mnr-services/" "./" "k8-demo/" "docker-mysql/" "opt/" "software/" "copy-to-contact-info-archive.py" "personal/" "backup/" "rdxOffline/" "queries/" "data/" "resdex-services/" "cron-monitor-rnd/" "curls/" "content-pipeline-schema/" "schemas/")
+
+ ("/home/BAK/" (26380 53022 326713 527000) "Work/" "wiki/" ".zshenv" "../" ".wezterm.lua" ".kube/" "notes/" "files_to_keep.txt" "99acres.postman_collection.json" "repos/" "kafka/" "intellij-java-code-formatter-style.xml" "Pictures/" ".histfile" "Documents/" "vpn.sh" "./" ".m2/" ".zshrc" "Downloads/" ".zsh_history" ".gitconfig" "Precision, Recall, Accuracy.pdf" ".emacs.d/" "kibana/" "opt_bak/" ".ideavimrc" "dotfiles/")
+
+ ("/home/" (26380 53365 191422 249000) "../" "himanshu/" "lost+found/" "BAK/" "./" "brain2/")
+
+ ("/home/himanshu/dotfiles/" (26381 8102 175920 579000) "../" ".wezterm.lua" ".gitignore" ".git/" ".stow-local-ignore" "./" ".zshrc" ".config/" ".emacs.d/")
+
+ ("/home/himanshu/Documents/" (26380 61380 97392 251000) "3379a47da70445f2b8b7fc88d39c02accc5266d149f43b5bb0c124ad61e461909ca394934cbdc73e796246b801c978bfcb55e832f736467293c85eb3430a5076_AWZPH8222Q_08DPS8U0909_081601_1.pdf" "../" "minis_rees_ingesition_2.xlsx" "Obsidian Vault/" "mitmproxy.html" "BE India offer letter_ Himanshu Singal.pdf" "Untitled.ipynb" "books/" "carrom_matches.ods" "GoogleStyle.xml" "InitiateSingleEntryPaymentSummary26-04-2024.pdf" "CML.pdf" "CustomQuickPayFundsTransferReceipt27-04-2024.pdf" "Steps.txt" "papers/" "new_compan/" "carrom_fixtures_2.ods" "ITR-2024-2025.pdf" "falcon-sensor_7.03.0-15805_amd64.deb" "ops_interface" "1 Clone this reository.txt" ".ipynb_checkpoints/" "./" "CustomQuickPayFundsTransferReceipt26-04-2024.pdf" "InitiateSingleEntryPaymentSummary27-04-2024.pdf" "mitmproxy_files/" "php_error_to_airflow_mapping.ods" "Precision, Recall, Accuracy.md" "HimanshuResume.pdf" "crons.ods" "Event%20Registration%20(Responses).xlsx_0.ods" "Zoom/" "to uninstall falcon.txt" "data.ods" "final_data.csv" "referral/" "class12.pdf" "Precision, Recall, Accuracy.pdf" "spring-boot-questions.pdf")
+
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/src/main/java/" (26381 7573 609702 523000) "com/" "../" "./")
+
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/src/main/" (26381 7573 610702 540000) "../" "./" "resources/" "java/")
+
+ ("/home/himanshu/repos/naukri-services/central-content-management-services/src/" (26381 7573 610702 540000) "../" "test/" "./" "main/")
+
+ ("/home/himanshu/repos/naukri-services/" (26382 15458 540405 207000) "../" "yes.pub" "central-content-management-services/" "ni_ff_cron/" "prompt-execute-services.iml" "./" "central-content-management-services-bak/" "central-content-plagiarism-services/" "archetype-exception-framework/" "rdxOffline/" "jobseeker-video-profile-moderation/" "naukri-content-management-services/" "prompt-execute-services/" "naukri-content-processing-services-bak/" "naukri-content-processing-services/" "yes" "generative-ai-services/")
+
  ("/home/himanshu/repos/discord-experiment/src/main/java/com/singalhimanshu/discord_experiment/" (26379 44967 872048 295000) "../" "./" "DiscordExperimentApplication.java")
 
  ("/home/himanshu/repos/discord-experiment/" (26379 42881 886324 400000) "mvnw" "../" "src/" "./" "mvnw.cmd" "HELP.md" ".gitignore" ".mvn/" "pom.xml")
-
- ("/home/himanshu/repos/" (26379 42896 318154 541000) "go-playground/" "../" "learn/" "java-interview-questions/" "./" "notmy/" "my-distributed-cache/" "source-hound/" "discord-experiment/")
-
- ("/home/" (26312 4922 970825 767000) "../" "./" "himanshu/" "lost+found/")
-
- ("/home/himanshu/.emacs.d/" (26379 37998 759770 877000) "auto-save-list/" "transient/" "eln-cache/" "../" "elpa/" "./" "init.el~" "backups/" "ido.last" "tree-sitter/" "custom.el" "init.el")
-
- ("/home/himanshu/" (26379 37824 558569 153000) ".fzf/" ".cache/" "Desktop/" ".ssh/" ".vscode/" "Templates/" "../" ".gitconfig" "IdeaProjects/" ".var/" ".m2/" ".fzf.zsh" ".tmux.conf" ".nvidia-settings-rc" ".fonts/" ".local/" ".xsession-errors" "./" ".java/" ".bashrc" ".bash_logout" ".themes/" ".zshrc.bak" ".gtkrc-2.0" "Music/" ".pyenv/" ".gnupg/" ".pki/" ".nvm/" ".mozilla/" ".fzf.bash" "go/" ".Xauthority" ".zshrc" ".linuxmint/" "_timetagger/" ".emacs.d/" "Videos/" ".profile" "repos/" "Downloads/" "Documents/" ".oh-my-zsh/" ".icons/" ".tmux/" ".zcompdump-himanshu-pc-5.9" ".npm/" ".gitignore" ".wezterm.lua" ".csearchindex~" ".sudo_as_admin_successful" ".zsh_history" ".dotnet/" ".gtkrc-xfce" ".dmrc" ".wget-hsts" ".xsession-errors.old" ".zcompdump-himanshu-pc-5.9.zwc" "Pictures/" ".ideavimrc" ".jdks/" ".bash_history" ".lesshst" ".csearchindex" "Public/" ".config/" "dotfiles/" ".zshrc.pre-oh-my-zsh")
 
  ("/home/himanshu/repos/notmy/codesearch/cmd/cgrep/" (26379 36640 873288 651000) "../" "./" "cgrep.go")
 
@@ -48,8 +126,6 @@
  ("/home/himanshu/repos/notmy/codesearch/cmd/" (26326 47683 943237 118000) "../" "cindex/" "./" "cgrep/" "csearch/" "csweb/")
 
  ("/home/himanshu/repos/notmy/codesearch/" (26326 49692 685947 633000) "index/" ".vscode/" "../" "./" "regexp/" "go.mod" "README" "cmd/" "LICENSE" "sparse/" "CONTRIBUTORS" "AUTHORS" ".git/" "lib/")
-
- ("/home/himanshu/repos/notmy/" (26364 65245 746162 349000) "ctags/" "../" "codesearch/" "v4l2loopback/" "neovim-0.10.1.zip" "Low-Level-Design/" "./" "Linux-Fake-Background-Webcam/" "neovim-0.10.1/")
 )
 
 ;; ----- ido-unc-hosts-cache -----
