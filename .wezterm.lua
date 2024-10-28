@@ -3,8 +3,8 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Gruvbox dark, hard (base16)'
-config.font = wezterm.font 'Comic Code Medium'
-config.font_size = 16
+config.font = wezterm.font 'Iosevka'
+config.font_size = 18
 -- config.disable_default_key_bindings = true
 
 config.keys = {
