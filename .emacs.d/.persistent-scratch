@@ -1,0 +1,143 @@
+(["*scratch*" "[[id:a4d50816-1663-4b01-8732-1ed9b0b22a3a][Commands]]{\"headers\": {\"AppId\": 401, \"SystemId\": \"UBASYSTEM\", \"X-TRANSACTION-ID\": \"uba_20241030\"}, \"payload\": {\"bot_confidence\": \"medium\", \"computed_at\": \"2024-10-30T08:33:30.318+05:30\", \"entity_type\": \"IP\", \"entity_value\": \"20.75.186.186\", \"source\": \"ClickStream\", \"tenant\": \"NI\", \"version\": \"v1\"}}
+
+public class LocalDateTimeDeserializer extends JsonDeserializer<LocalDateTime> {
+    @Override
+    public LocalDateTime deserialize(JsonParser p, DeserializationContext ctxt)
+            throws IOException, JsonProcessingException {
+        String dateTimeString = p.getText();
+        OffsetDateTime offsetDateTime = OffsetDateTime.parse(dateTimeString);
+        return offsetDateTime.toLocalDateTime(); // convert to LocalDateTime
+    }
+}
+curl 'https://logs.naukri.com/uba' \\
+  -H 'accept: */*' \\
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \\
+  -H 'cache-control: no-cache' \\
+  -H 'content-type: text/plain;charset=UTF-8' \\
+  -H 'cookie: test=naukri.com; _t_r=1030%2F%2F; persona=default; _t_ds=13fcd26d1728971916-513fcd26d-013fcd26d; J=0; _ga=GA1.1.1648241964.1728971918; _gcl_au=1.1.2059143636.1728971918; _ga_T749QGK6MQ=GS1.1.1728971918.1.0.1728971918.0.0.0; __utmc=266160400; __utma=266160400.1648241964.1728971918.1729681876.1730112877.2; __utmz=266160400.1730112877.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); ninjas_new_marketing_token=73475f9f9339c1a091e077b216cd38f3; _clck=1qem7dt%7C2%7Cfqf%7C0%7C1763; ph_phc_s4aJa5RpiiZlHbbxy4Y1Btjhosozg9ECrSuJNVrvZuP_posthog=%7B%22distinct_id%22%3A%22192d69358f2e18-0498b1a109679a-1e462c6f-384000-192d69358f3530e%22%7D; _ga_7TYVEWTVRG=GS1.1.1730192356.2.0.1730192356.0.0.0; _ga_JCSR1LRE3X=GS1.1.1730192356.2.0.1730192356.0.0.0; _ga_K2YBNZVRLL=GS1.1.1730287302.8.0.1730287302.60.0.0; _t_us=672216CA; _t_s=direct; HOWTORT=cl=1730287306660&r=https%3A%2F%2Fwww.naukri.com%2Fminis%2Fvideos&nu=https%3A%2F%2Fwww.naukri.com%2F&ul=1730287306669&hd=1730287306799' \\
+  -H 'origin: https://www.naukri.com' \\
+  -H 'pragma: akamai-x-ro-trace' \\
+  -H 'priority: u=4, i' \\
+  -H 'referer: https://www.naukri.com/' \\
+  -H 'sec-ch-ua: \"Google Chrome\";v=\"129\", \"Not=A?Brand\";v=\"8\", \"Chromium\";v=\"129\"' \\
+  -H 'sec-ch-ua-mobile: ?0' \\
+  -H 'sec-ch-ua-platform: \"Linux\"' \\
+  -H 'sec-fetch-dest: empty' \\
+  -H 'sec-fetch-mode: no-cors' \\
+  -H 'sec-fetch-site: same-site' \\
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36' \\
+  -H 'x-akamai-a2-disable: on' \\
+  -H 'x-akamai-ro-piez: on' \\
+  -H 'x-im-piez: on' \\
+  --data-raw '{\"url\":\"https%3A%2F%2Fwww.naukri.com%2F\",\"referrer\":\"https://www.naukri.com/minis/videos\",\"deviceType\":\"WEB\",\"screenReso\":\"1920x1080\",\"pageName\":\"homepage\",\"appId\":\"103\",\"eventName\":\"searchFormView\",\"eventId\":\"c4f0ec70-5667-1c74-e221-a288932b8fbd-1730287307058\",\"timestamp\":1730287307058,\"refEventName\":\"homepageView\",\"refEventId\":\"c4f0ec70-5667-1c74-e221-a288932b8fbd-1730287307024\",\"uniqueDid\":\"c4f0ec70-5667-1c74-e221-a288932b8fbd-1728971917325\",\"cnid\":\"\",\"lang\":\"en\",\"countryCode\":null,\"username\":null,\"loginStatus\":false,\"utmTerm\":null,\"utmSource\":null,\"utmContent\":null,\"utmMedium\":null,\"utmCampaign\":null,\"tenantId\":\"1\",\"subclientTenantId\":\"0\",\"fingerPrintId\":\"\",\"utmAdGroup\":null,\"action\":\"view\",\"actionSrc\":\"new search\",\"profileSegment\":\"default\"}'
+Name:             naukri-content-processing-services-test100-deployment-68b7q9wv6
+Namespace:        naukri-services-test2
+Priority:         0
+Service Account:  default
+Node:             worker1-kube.local.ieil.com/192.168.40.134
+Start Time:       Fri, 01 Nov 2024 15:53:11 +0530
+Labels:           app-pod=naukri-content-processing-services
+                  appname=naukri-content-processing-services-test100
+                  pod-template-hash=68b7bb954c
+                  team-pod=naukri-content-processing-services
+                  version=test100
+Annotations:      cni.projectcalico.org/containerID: ff6b392dcd28ba9ebd16da6d73a2769e086df595478a1e563027cbd9aa4e488c
+                  cni.projectcalico.org/podIP: 10.244.215.3/32
+                  cni.projectcalico.org/podIPs: 10.244.215.3/32
+Status:           Running
+IP:               10.244.215.3
+IPs:
+  IP:           10.244.215.3
+Controlled By:  ReplicaSet/naukri-content-processing-services-test100-deployment-68b7bb954c
+Init Containers:
+  model-files:
+    Container ID:   containerd://6fa90b7a589859a016fccb38928cbf046cdcf6c9dd0c51be15ed87d1f3d7e4df
+    Image:          docker.infoedge.com:5000/infra/sources/naukri-content-processing-services:v1
+    Image ID:       docker.infoedge.com:5000/infra/sources/naukri-content-processing-services@sha256:a60e266e4a04d2001e3e669a93ffeda92cc539ddb4bddaeaad058e6ff33cee27
+    Port:           <none>
+    Host Port:      <none>
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Fri, 01 Nov 2024 15:53:14 +0530
+      Finished:     Fri, 01 Nov 2024 15:53:15 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      DEPLOY_NAME:  naukri-content-processing-services-test100-deployment
+      VERSION:      v1
+    Mounts:
+      /data/dest from share-files (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-r8tzf (ro)
+Containers:
+  naukri-content-processing-services-test100:
+    Container ID:  containerd://ac1036721b6a7e2e45accf9f49c68bcabab067f7aef1fa5cc70d0b4198335aad
+    Image:         docker.infoedge.com:5000/infra/python/naukri-content-processing-services:v1.1.1-beta7
+    Image ID:      docker.infoedge.com:5000/infra/python/naukri-content-processing-services@sha256:cc4b6d33b045b008d0e3d2cfaa9f0e4abd6e5bb92150ddc56897826a8076bef0
+    Port:          80/TCP
+    Host Port:     0/TCP
+    Command:
+      /bin/sh
+      -c
+      echo RUN sleep command; while :; do echo Sleeping for 1 min!; sleep 1m; done
+    Args:
+      -b
+      0.0.0.0:8080
+      --workers
+      1
+      --timeout
+      600
+      --config
+      gunicorn_config.py
+      --access-logfile
+      access.log
+      --log-file
+      server.log
+      -e
+      ENV=cluster
+      wsgi:app
+    State:          Running
+      Started:      Fri, 01 Nov 2024 15:53:17 +0530
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     4
+      memory:  8G
+    Requests:
+      cpu:     2
+      memory:  4G
+    Environment:
+      CLUSTER_URL:  
+      ENVIRONMENT:  test2
+    Mounts:
+      /data/files/ from share-files (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-r8tzf (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  share-files:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  kube-api-access-r8tzf:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              ni-node=any
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:                      <none>
+
+[[id:a4d50816-1663-4b01-8732-1ed9b0b22a3a][Commands]]docker run -it --entrypoint=\"/bin/bash\" docker.infoedge.com:5000/infra/sources/naukri-content-processing-services:v1
+
+command for sources file:
+~/deployer/naukrideployer setup -target=copyCreate -name=naukri-content-processing-services -image.tag=v1 -copy.dir=/apps/static-files ./app.json
+
+" (1 . 7586) js-json-mode nil nil])

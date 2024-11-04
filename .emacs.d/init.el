@@ -8,26 +8,88 @@
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups"))
       auto-save-file-name-transforms `((".*" "~/.emacs.d/auto-save-list/" t)))
 
+(setq modus-themes-mode-line '(accented borderless)
+      modus-themes-bold-constructs t
+      modus-themes-italic-constructs t
+      modus-themes-fringes 'subtle
+      modus-themes-tabs-accented t
+      modus-themes-paren-match '(bold intense)
+      modus-themes-prompts '(bold intense)
+      modus-themes-completions 'opinionated
+      modus-themes-org-blocks 'tinted-background
+      modus-themes-scale-headings t
+      modus-themes-region '(bg-only)
+      modus-themes-headings
+      '((1 . (rainbow overline background 1.4))
+        (2 . (rainbow background 1.3))
+        (3 . (rainbow bold 1.2))
+        (t . (semilight 1.1))))
+(load-theme 'modus-vivendi t)
+
+
 (use-package evil
   :ensure t
   :init
-  (setq evil-want-C-u-scroll t)
+  (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
   :config
   (evil-mode t)
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
   (evil-set-undo-system 'undo-redo))
 
 (use-package evil-collection
   :ensure t
   :after evil
-  :init
+  :config
   (evil-collection-init))
 
-(use-package magit
+(use-package general
+  :ensure t
+  :after evil
+  :config
+  (general-create-definer efs/leader-keys
+    :keymaps '(normal insert visual emacs)
+    :prefix "SPC"
+    :global-prefix "C-SPC")
+
+  (efs/leader-keys
+    "SPC" '(project-find-file :which-key "project find file")
+    "pp" '(project-switch-project :which-key "switch project")
+    "pd" '(project-dired :which-key "project dired")
+    "pc" '(project-compile :which-key "project dired")
+    "pg" '(project-find-regexp :which-key "project grep")
+    "pb" '(project-switch-to-buffer :which-key "project list buffers")
+    "p!" '(project-shell-command :which-key "project shell command")
+    "'" '(recompile :which-key "recompile")
+    "cc" '(compile :which-key "recompile")
+    "og" '(magit :which-key "open magit")
+    "ot" '(vterm :which-key "open vterm")
+    "od" '(dired :which-key "open dired")
+    "ff" '(find-file :which-key "find file")
+    "bb" '(switch-to-buffer :which-key "switch buffer")
+    "bk" '(kill-buffer :which-key "kill buffer")
+    "nn" '(org-roam-buffer-toggle :which-key "notes toggle")
+    "nf" '(org-roam-node-find :which-key "find notes")
+    "ni" '(org-roam-node-insert :which-key "insert new note")
+    "wq" '(evil-window-delete :which-key "close window")
+    "wk" '(evil-window-up :which-key "window up")
+    "wj" '(evil-window-down :which-key "window down")
+    "wh" '(evil-window-left :which-key "window left")
+    "wl" '(evil-window-right :which-key "window right")
+    "wo" '(delete-other-windows :which-key "delete other windows")
+    "fc" '(lambda () (interactive) (find-file (expand-file-name "~/.emacs.d/init.el")))))
+
+(use-package evil-commentary
+  :ensure t
+  :after evil
   :init
-  (setq magit-status-buffer-switch-function 'switch-to-buffer)
-  ;; (setq magit-completing-read-function #'magit-ido-completing-read)
-  :ensure t)
+  (evil-commentary-mode))
+
+(use-package magit
+  :ensure t
+  :config
+  (setq magit-status-buffer-switch-function 'switch-to-buffer))
 
 (use-package company
   :commands company-mode
@@ -40,9 +102,9 @@
   :ensure t)
 
 (use-package gruber-darker-theme
-  :ensure t
-  :config
-  (load-theme 'gruber-darker))
+  :ensure t)
+  ;; :config
+  ;; (load-theme 'gruber-darker))
 
 ;; (ido-mode)
 ;; (ido-everywhere)
@@ -51,9 +113,9 @@
 ;; (setq ido-use-filename-at-point 'guess)
 ;; (setq ido-create-new-buffer 'always)
 
-(use-package smex
-    :bind (("M-x" . smex))
-    :config (smex-initialize))
+;; (use-package smex
+;;     :bind (("M-x" . smex))
+;;     :config (smex-initialize))
 
 (use-package yaml-mode
   :ensure t)
@@ -68,9 +130,10 @@
 (scroll-bar-mode -1)
 (global-display-line-numbers-mode 1)
 (global-hl-line-mode 1)
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
 
-
-(global-set-key (kbd "<f5>") 'recompile)
+(global-set-key (kbd "C-c '") 'recompile)
 
 (require 'project)
 
@@ -131,3 +194,76 @@
   (setq minibuffer-prompt-properties
         '(read-only t cursor-intangible t face minibuffer-prompt))
   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
+
+(setq dired-dwim-target t)
+
+(use-package persistent-scratch
+  :ensure t
+  :config
+  (persistent-scratch-autosave-mode 1)
+  (persistent-scratch-setup-default))
+
+(use-package pyvenv
+  :ensure t
+  :config
+  (pyvenv-mode t)
+
+  ;; Set correct Python interpreter
+  (setq pyvenv-post-activate-hooks
+        (list (lambda ()
+                (setq python-shell-interpreter (concat pyvenv-virtual-env "bin/python3")))))
+  (setq pyvenv-post-deactivate-hooks
+        (list (lambda ()
+                (setq python-shell-interpreter "python3")))))
+
+(use-package marginalia
+  :ensure t
+  ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
+  ;; available in the *Completions* buffer, add it to the
+  ;; `completion-list-mode-map'.
+  :bind (:map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+
+  ;; The :init section is always executed.
+  :init
+
+  ;; Marginalia must be activated in the :init section of use-package such that
+  ;; the mode gets enabled right away. Note that this forces loading the
+  ;; package.
+  (marginalia-mode))
+
+(use-package vterm
+  :ensure t
+  :commands vterm
+  :custom
+  (vterm-always-compile-module t)
+  :hook
+  (vterm-mode . (lambda ()
+		  ;; Settings to mimic dracula I use for zsh.
+		  (setq-local buffer-face-mode-face '(:background "#000000" :foreground "#FFFFFF"))
+		  (buffer-face-mode 1)
+		  (text-scale-adjust 2))))
+
+(setq compilation-scroll-output 'first-error)
+
+(use-package org-superstar
+  :ensure t
+  :after org
+  :hook (org-mode . org-superstar-mode)
+  :config
+  (setq org-superstar-special-todo-items t))
+
+(use-package indent-bars
+  :ensure t
+  :hook ((python-mode yaml-mode) . indent-bars-mode))
+
+(save-place-mode 1)
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
+
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/Documents/notes")
+  :config
+  (org-roam-setup))
