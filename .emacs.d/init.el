@@ -131,3 +131,23 @@
   (setq minibuffer-prompt-properties
         '(read-only t cursor-intangible t face minibuffer-prompt))
   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
+
+;; org-babel config
+(org-babel-do-load-languages 'org-babel-load-languages '(
+							 (shell . t)
+							 (java . t)
+							 (python . t)))
+(setq org-confirm-babel-evaluate nil)
+;; (setq org-src-preserve-indentation t)
+;; (add-hook 'org-mode-hook
+;;           (lambda () (setq evil-auto-indent nil)))
+
+
+;; org-mode config
+(setq org-hide-emphasis-markers t)
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(global-set-key (kbd "C-c '") 'recompile)
