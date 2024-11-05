@@ -30,5 +30,16 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
+opt.makeprg = "make"
+opt.errorformat = "%f:%l:%c: %m"
+
 vim.g.netrw_liststyle = 3
 vim.g.netrw_banner = 0
+
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+  pattern = { "[^l]*" },
+  callback = function()
+    vim.cmd("cwindow")
+  end,
+})
+
