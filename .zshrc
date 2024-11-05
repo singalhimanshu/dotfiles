@@ -5,6 +5,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 export EDITOR="nvim"
 export VISUAL="nvim"
+export NC_DOCKER_REPOSITORY=docker.infoedge.com:5000
+export DOCKER_HOST=tcp://0.0.0.0:424
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
