@@ -63,6 +63,9 @@
     "p!" '(project-shell-command :which-key "project shell command")
     "'" '(recompile :which-key "recompile")
     "cc" '(compile :which-key "recompile")
+    "ac" '(org-time-stamp :which-key "org agenda calendar")
+    "at" '(org-set-tags-command :which-key "org set tags")
+    "oa" '(org-agenda :which-key "open agenda")
     "og" '(magit :which-key "open magit")
     "ot" '(vterm :which-key "open vterm")
     "od" '(dired :which-key "open dired")
@@ -195,12 +198,17 @@
         '(read-only t cursor-intangible t face minibuffer-prompt))
   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
 
-<<<<<<< HEAD
 ;; org-babel config
 (org-babel-do-load-languages 'org-babel-load-languages '(
 							 (shell . t)
 							 (java . t)
 							 (python . t)))
+;; org-agenda config
+(setq org-agenda-files '("~/Documents/org/agenda.org"))
+(setq org-agenda-custom-commands
+      '(("c" "Content tasks"
+	 tags-todo "+work")))
+
 (setq org-confirm-babel-evaluate nil)
 ;; (setq org-src-preserve-indentation t)
 ;; (add-hook 'org-mode-hook
@@ -209,13 +217,8 @@
 
 ;; org-mode config
 (setq org-hide-emphasis-markers t)
-(use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-
 (global-set-key (kbd "C-c '") 'recompile)
-=======
+
 (setq dired-dwim-target t)
 
 (use-package persistent-scratch
