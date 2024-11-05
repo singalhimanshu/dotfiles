@@ -1,0 +1,129 @@
+[global_config]
+  window_state = maximise
+  tab_position = bottom
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, SaveLastSessionLayout, ActivityWatch, TerminatorThemes
+  suppress_multiple_term_dialog = True
+[keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  split_horiz = <Alt>minus
+  split_vert = <Alt>bar
+  move_tab_right = <Alt>braceright
+  move_tab_left = <Alt>braceleft
+  next_tab = <Alt>bracketright
+  prev_tab = <Alt>bracketleft
+  full_screen = <Alt>Return
+  broadcast_off = <Alt>n
+  broadcast_group = <Alt>a
+  broadcast_all = <Shift><Alt>b
+  layout_launcher = <Alt>F9
+[profiles]
+  [[default]]
+    background_color = "#141414"
+    background_darkness = 0.95
+    background_type = image
+    background_image = /home/himanshuk/Pictures/photo-1516914589923-f105f1535f88.jpeg
+    font = Iosevka 18
+    foreground_color = "#cdd6f4"
+    show_titlebar = False
+    scrollback_lines = 10000
+    palette = "#45475a:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#bac2de:#585b70:#f38ba8:#a6e3a1:#f9e2af:#89b4fa:#f5c2e7:#94e2d5:#a6adc8"
+  [[New Profile]]
+  [[ayu_light]]
+    background_color = "#fafafa"
+    font = Comic Code Medium 12
+    foreground_color = "#5c6773"
+    scrollback_lines = 5000
+    palette = "#000000:#ff3333:#86b300:#f29718:#41a6d9:#f07178:#4dbf99:#ffffff:#323232:#ff6565:#b8e532:#ffc94a:#73d8ff:#ffa3aa:#7ff1cb:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+  [[Catppuccin_Latte]]
+    background_color = "#eff1f5"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#4c4f69"
+    palette = "#5c5f77:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#acb0be:#6c6f85:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#bcc0cc"
+    use_system_font = False
+  [[CLRS]]
+    background_color = "#ffffff"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#262626"
+    palette = "#000000:#f8282a:#328a5d:#fa701d:#135cd0:#9f00bd:#33c3c1:#b3b3b3:#555753:#fb0416:#2cc631:#fdd727:#1670ff:#e900b0:#3ad5ce:#eeeeec"
+    use_system_font = False
+  [[Nord]]
+    background_color = "#2E3440"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#D8DEE9"
+    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
+    use_system_font = False
+  [[Ocean dark]]
+    background_color = "#1c1f27"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#979cac"
+    palette = "#4F4F4F:#AF4B57:#AFD383:#E5C079:#7D90A4:#A4799D:#85A6A5:#EEEDEE:#7B7B7B:#AF4B57:#CEFFAB:#FFFECC:#B5DCFE:#FB9BFE:#DFDFFD:#FEFFFE"
+    use_system_font = False
+  [[Tomorrow Night]]
+    background_color = "#1d1f21"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#c5c8c6"
+    palette = "#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff:#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
+    use_system_font = False
+  [[tokyonight-storm]]
+    background_color = "#24283b"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#c0caf5"
+    palette = "#1d202f:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#a9b1d6:#414868:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#c0caf5"
+    use_system_font = False
+  [[synthwave]]
+    font = Fantasque Sans Mono 13
+    foreground_color = "#dad9c7"
+    palette = "#000000:#f6188f:#1ebb2b:#fdf834:#2186ec:#f85a21:#12c3e2:#ffffff:#000000:#f841a0:#25c141:#fdf454:#2f9ded:#f97137:#19cde6:#ffffff"
+    use_system_font = False
+  [[Peppermint]]
+    background_color = "#eee8d5"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#c7c7c7"
+    palette = "#353535:#E64569:#89D287:#DAB752:#439ECF:#D961DC:#64AAAF:#B3B3B3:#535353:#E4859A:#A2CCA1:#E1E387:#6FBBE2:#E586E7:#96DCDA:#DEDEDE"
+    use_system_font = False
+  [[One dark]]
+    background_color = "#1e2127"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#5c6370"
+    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
+    use_system_font = False
+  [[Catppuccin_Macchiato]]
+    background_color = "#24273a"
+    font = Fantasque Sans Mono 13
+    foreground_color = "#cad3f5"
+    palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#a5adcb"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+  [[SaveLastSessionLayout]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 38, 46
+      title = /usr/bin/zsh
+      last_active_term = 298bc89f-3c5c-4b56-a781-5642fac36028
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 298bc89f-3c5c-4b56-a781-5642fac36028
+      directory = /home/himanshuk
+[plugins]

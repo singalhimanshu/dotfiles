@@ -55,11 +55,14 @@
 
   (efs/leader-keys
     "SPC" '(project-find-file :which-key "project find file")
+    "y" '(consult-yank-from-kill-ring :which-key "yank from kill ring")
+    ":" '(consult-line :which-key "go to line")
+    "/" '(consult-ripgrep :which-key "grep")
     "pp" '(project-switch-project :which-key "switch project")
     "pd" '(project-dired :which-key "project dired")
     "pc" '(project-compile :which-key "project dired")
     "pg" '(project-find-regexp :which-key "project grep")
-    "pb" '(project-switch-to-buffer :which-key "project list buffers")
+    "pb" '(consult-project-buffer :which-key "project list buffers")
     "p!" '(project-shell-command :which-key "project shell command")
     "'" '(recompile :which-key "recompile")
     "cc" '(compile :which-key "recompile")
@@ -70,7 +73,8 @@
     "ot" '(vterm :which-key "open vterm")
     "od" '(dired :which-key "open dired")
     "ff" '(find-file :which-key "find file")
-    "bb" '(switch-to-buffer :which-key "switch buffer")
+    "fr" '(consult-recent-file :which-key "find recent file")
+    "bb" '(consult-buffer :which-key "switch buffer")
     "bk" '(kill-buffer :which-key "kill buffer")
     "nn" '(org-roam-buffer-toggle :which-key "notes toggle")
     "nf" '(org-roam-node-find :which-key "find notes")
@@ -291,3 +295,42 @@
   (org-roam-directory "~/Documents/notes")
   :config
   (org-roam-setup))
+
+(use-package consult
+  :ensure t)
+
+(use-package embark
+  :ensure t
+
+  :bind
+  (("C-." . embark-act)         ;; pick some comfortable binding
+   ("C-;" . embark-dwim)        ;; good alternative: M-.
+   ("C-h B" . embark-bindings)) ;; alternative for `describe-bindings'
+
+  :init
+
+  ;; Optionally replace the key help with a completing-read interface
+  (setq prefix-help-command #'embark-prefix-help-command)
+
+  ;; Show the Embark target at point via Eldoc. You may adjust the
+  ;; Eldoc strategy, if you want to see the documentation from
+  ;; multiple providers. Beware that using this can be a little
+  ;; jarring since the message shown in the minibuffer can be more
+  ;; than one line, causing the modeline to move up and down:
+
+  ;; (add-hook 'eldoc-documentation-functions #'embark-eldoc-first-target)
+  ;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
+
+  :config
+
+  ;; Hide the mode line of the Embark live/completions buffers
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+                 nil
+                 (window-parameters (mode-line-format . none)))))
+
+;; Consult users will also want the embark-consult package.
+(use-package embark-consult
+  :ensure t ; only need to install it, embark loads it after consult if found
+  :hook
+  (embark-collect-mode . consult-preview-at-point-mode))
