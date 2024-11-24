@@ -1,5 +1,10 @@
 local opt = vim.opt
 
+opt.completeopt = { "menu", "menuone", "noselect" }
+opt.conceallevel = 2
+opt.concealcursor = 'nc'
+-- opt.shellslash = true
+
 opt.relativenumber = true
 opt.number = true
 
