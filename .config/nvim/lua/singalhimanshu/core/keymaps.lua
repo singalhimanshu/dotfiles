@@ -1,14 +1,25 @@
 vim.g.mapleader = " "
 
-local keymap = vim.keymap -- for conciseness
+local set = vim.keymap.set
 
-keymap.set("n", "<leader><CR>", ":nohl<CR>", { desc = "Clear search highlights" })
--- keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "open netrw" })
-keymap.set("n", "<TAB>", "%", { desc = "toggle bracket" })
-keymap.set("n", "\\", "gt", { desc = "go to tab" })
+set("n", "<leader><CR>", ":nohl<CR>", { desc = "Clear search highlights" })
+-- set("n", "<leader>e", ":Ex<CR>", { desc = "open netrw" })
+set("n", "<TAB>", "%", { desc = "toggle bracket" })
+set("n", "\\", "gt", { desc = "go to tab" })
 
-keymap.set("n", "<leader>mb", ":make build<CR>", { desc = "make build" })
-keymap.set("n", "<leader>mr", ":make run<CR>", { desc = "make run" })
-keymap.set("n", "<leader>mt", ":make test<CR>", { desc = "make test" })
-keymap.set("n", "<leader>mf", ":make format<CR>", { desc = "make format" })
-keymap.set("n", "<leader>mc", ":make clean<CR>", { desc = "make clean" })
+set("n", "<leader>mm", ":make<CR>", { desc = "make make" })
+set("n", "<leader>mb", ":make build<CR>", { desc = "make build" })
+set("n", "<leader>mr", ":make run<CR>", { desc = "make run" })
+set("n", "<leader>mt", ":make test<CR>", { desc = "make test" })
+set("n", "<leader>mf", ":make format<CR>", { desc = "make format" })
+set("n", "<leader>mc", ":make clean<CR>", { desc = "make clean" })
+
+set("n", "<c-j>", "<c-w><c-j>")
+set("n", "<c-k>", "<c-w><c-k>")
+set("n", "<c-l>", "<c-w><c-l>")
+set("n", "<c-h>", "<c-w><c-h>")
+
+set("n", "<M-,>", "<c-w>5<")
+set("n", "<M-.>", "<c-w>5>")
+set("n", "<M-t>", "<C-W>+")
+set("n", "<M-s>", "<C-W>-")
