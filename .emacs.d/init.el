@@ -1,6 +1,12 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
 
+(add-hook 'json-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq tab-width 2)
+            (setq js-indent-level 2)))
+
 (add-to-list 'package-archives 
     '("MELPA" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -26,6 +32,20 @@
         (t . (semilight 1.1))))
 (load-theme 'modus-vivendi t)
 
+(use-package json-mode
+  :ensure t)
+
+(use-package format-all
+  :ensure t
+  :preface
+  (defun ian/format-code ()
+    (interactive)
+    (if (derived-mode-p 'prolog-mode)
+        (prolog-indent-buffer)
+      (format-all-buffer)))
+  :config
+  (global-set-key (kbd "M-F") #'ian/format-code)
+  (add-hook 'prog-mode-hook #'format-all-ensure-formatter))
 
 (use-package evil
   :ensure t
@@ -36,6 +56,7 @@
   :config
   (evil-mode t)
   (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  (evil-set-initial-state 'rfc-mode 'emacs)
   (evil-set-undo-system 'undo-redo))
 
 (use-package evil-collection
@@ -43,6 +64,11 @@
   :after evil
   :config
   (evil-collection-init))
+
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
 
 (use-package general
   :ensure t
@@ -55,6 +81,8 @@
 
   (efs/leader-keys
     "SPC" '(project-find-file :which-key "project find file")
+    "+" '(text-scale-increase :which-key "zoom in")
+    "-" '(text-scale-decrease :which-key "zoom out")
     "y" '(consult-yank-from-kill-ring :which-key "yank from kill ring")
     ":" '(consult-line :which-key "go to line")
     "/" '(consult-ripgrep :which-key "grep")
@@ -210,8 +238,8 @@
 ;; org-agenda config
 (setq org-agenda-files '("~/Documents/org/agenda.org"))
 (setq org-agenda-custom-commands
-      '(("c" "Content tasks"
-	 tags-todo "+work")))
+      '(("c" "CP"
+	 tags-todo "+CP")))
 
 (setq org-confirm-babel-evaluate nil)
 ;; (setq org-src-preserve-indentation t)
@@ -299,6 +327,9 @@
 (use-package consult
   :ensure t)
 
+(use-package rfc-mode
+  :ensure t)
+
 (use-package embark
   :ensure t
 
@@ -334,3 +365,8 @@
   :ensure t ; only need to install it, embark loads it after consult if found
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
+
+(use-package hl-todo
+  :ensure t
+  :init
+  (global-hl-todo-mode))
