@@ -15,7 +15,7 @@
       modus-themes-tabs-accented t
       modus-themes-paren-match '(bold intense)
       modus-themes-prompts '(bold intense)
-      modus-themes-completions 'opinionated
+      ;; modus-themes-completions 'opinionated
       modus-themes-org-blocks 'tinted-background
       modus-themes-scale-headings t
       modus-themes-region '(bg-only)
